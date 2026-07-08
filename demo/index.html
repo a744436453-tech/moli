@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moli 宠物数字人 Demo</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">M</div>
+        <div>
+          <div class="brand-title">Moli</div>
+          <div class="brand-subtitle">宠物数字陪伴 MVP</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="功能导航">
+        <button class="nav-item active" data-target="home">首页陪伴</button>
+        <button class="nav-item" data-target="avatar">生成数字形象</button>
+        <button class="nav-item" data-target="chat">Momo 聊天</button>
+        <button class="nav-item" data-target="memory">回忆时间线</button>
+        <button class="nav-item" data-target="play">互动玩法</button>
+        <button class="nav-item" data-target="profile">我的与设置</button>
+      </nav>
+
+      <div class="side-card">
+        <div class="side-card-label">Demo 状态</div>
+        <div class="side-card-title">已按功能拆板块</div>
+        <p>每个功能拥有独立页面、状态文案和交互反馈，便于后续替换为真实视觉稿。</p>
+      </div>
+    </aside>
+
+    <main class="stage">
+      <section id="home" class="panel active">
+        <div class="panel-copy">
+          <span class="eyebrow">Home</span>
+          <h1>一打开，就能见到 Momo</h1>
+          <p>首页以陪伴感为核心，弱化工具入口，突出宠物状态、今日互动和温柔的记忆提醒。</p>
+          <div class="action-row">
+            <button class="primary" data-toast="Momo 摇尾巴靠近了你">轻轻抚摸</button>
+            <button class="secondary" data-target="chat">和 Momo 说话</button>
+          </div>
+        </div>
+        <div class="phone-frame">
+          <div class="mobile-screen home-screen">
+            <div class="statusbar"><span>9:41</span><span>● ● ●</span></div>
+            <div class="top-pill">今天也在等你回家</div>
+            <div class="pet-hero">
+              <div class="sun-glow"></div>
+              <div class="pet-body">
+                <div class="ear left"></div><div class="ear right"></div>
+                <div class="face"><span></span><span></span></div>
+                <div class="nose"></div>
+              </div>
+            </div>
+            <div class="mood-card">
+              <div><b>Momo</b><p>心情很好 · 想玩球</p></div>
+              <button data-toast="已进入玩球互动">去互动</button>
+            </div>
+            <div class="quick-grid">
+              <button>摸摸</button><button>投喂</button><button>玩球</button><button>拍照</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="avatar" class="panel">
+        <div class="panel-copy">
+          <span class="eyebrow">Avatar</span>
+          <h1>3 步生成宠物数字形象</h1>
+          <p>支持在世宠物和已离世宠物，上传照片后补充性格、习惯和声音记忆，生成可互动形象。</p>
+          <div class="steps">
+            <div class="step active"><b>01</b>上传照片</div>
+            <div class="step"><b>02</b>选择风格</div>
+            <div class="step"><b>03</b>生成陪伴</div>
+          </div>
+        </div>
+        <div class="phone-frame">
+          <div class="mobile-screen form-screen">
+            <div class="statusbar"><span>9:41</span><span>● ● ●</span></div>
+            <h2>生成 Momo</h2>
+            <div class="upload-card">
+              <div class="upload-icon">＋</div>
+              <b>上传 3-10 张照片</b>
+              <p>正脸、侧脸、生活照都可以</p>
+            </div>
+            <div class="style-list">
+              <button class="selected">温馨治愈</button>
+              <button>微信清爽</button>
+              <button>毛玻璃梦境</button>
+            </div>
+            <label>它最像什么？</label>
+            <textarea placeholder="比如：胆小但很黏人，喜欢把头放在腿上……"></textarea>
+            <button class="full primary" data-toast="已开始生成数字形象">开始生成</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="chat" class="panel">
+        <div class="panel-copy">
+          <span class="eyebrow">Chat</span>
+          <h1>像微信一样轻松聊天</h1>
+          <p>聊天不做沉重悼念，而是用日常问候、记忆触发和语音陪伴建立长期留存。</p>
+          <div class="action-row">
+            <button class="primary" data-toast="Momo 回复：我也想你啦">发送一句想你</button>
+            <button class="secondary" data-toast="已切换语音模式">语音模式</button>
+          </div>
+        </div>
+        <div class="phone-frame">
+          <div class="mobile-screen chat-screen">
+            <div class="chat-header"><span>‹</span><b>Momo</b><em>在线陪伴中</em></div>
+            <div class="bubble pet">今天你回来得有点晚，我一直在门口等你。</div>
+            <div class="bubble user">我今天有点累。</div>
+            <div class="bubble pet">那我把小爪子放你手上，陪你安静一会儿。</div>
+            <div class="memory-chip">触发回忆：第一次去公园</div>
+            <div class="inputbar"><span>＋</span><input placeholder="和 Momo 说话"/><button>发送</button></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="memory" class="panel">
+        <div class="panel-copy">
+          <span class="eyebrow">Memory</span>
+          <h1>把回忆变成可以回看的时间线</h1>
+          <p>照片、视频、故事和纪念日统一收纳，让用户在不打扰的情况下被温柔提醒。</p>
+        </div>
+        <div class="phone-frame">
+          <div class="mobile-screen memory-screen">
+            <div class="statusbar"><span>9:41</span><span>● ● ●</span></div>
+            <h2>回忆</h2>
+            <div class="timeline">
+              <div class="timeline-item"><b>2026.07</b><p>你给 Momo 生成了第一个数字形象</p></div>
+              <div class="timeline-item"><b>2024.05</b><p>第一次去河边玩，它追着风跑了很久</p></div>
+              <div class="timeline-item"><b>2021.09</b><p>它来到家里的第一天</p></div>
+            </div>
+            <button class="full primary" data-toast="已打开新增回忆入口">新增回忆</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="play" class="panel">
+        <div class="panel-copy">
+          <span class="eyebrow">Play</span>
+          <h1>互动不是按钮，是有反馈的陪伴</h1>
+          <p>抚摸、投喂、玩球、拍照都需要有即时反馈，避免纪念产品变成静态相册。</p>
+        </div>
+        <div class="phone-frame">
+          <div class="mobile-screen play-screen">
+            <div class="statusbar"><span>9:41</span><span>● ● ●</span></div>
+            <h2>互动</h2>
+            <div class="play-yard">
+              <div class="ball"></div>
+              <div class="mini-pet"></div>
+            </div>
+            <div class="play-actions">
+              <button data-toast="Momo 蹭了蹭你的手">抚摸</button>
+              <button data-toast="Momo 吃完后开心转圈">投喂</button>
+              <button data-toast="球滚出去了，Momo 追了上去">玩球</button>
+              <button data-toast="已保存今日合照">拍照</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="profile" class="panel">
+        <div class="panel-copy">
+          <span class="eyebrow">Profile</span>
+          <h1>我的页面承载资料、隐私和续费</h1>
+          <p>不放复杂会员模块，先保留宠物档案、资料管理、隐私设置和导出纪念册。</p>
+        </div>
+        <div class="phone-frame">
+          <div class="mobile-screen profile-screen">
+            <div class="statusbar"><span>9:41</span><span>● ● ●</span></div>
+            <div class="profile-head"><div class="avatar-dot"></div><div><b>周宇</b><p>已创建 1 个宠物数字形象</p></div></div>
+            <div class="setting-list">
+              <button>宠物档案管理 <span>›</span></button>
+              <button>照片与素材库 <span>›</span></button>
+              <button>隐私与数据导出 <span>›</span></button>
+              <button>生成纪念册 <span>›</span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="./app.js"></script>
+</body>
+</html>
