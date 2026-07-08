@@ -1,13 +1,13 @@
 # Moli iOS Project Structure
 
-This directory is organized around the PRD user journeys instead of technical screens alone.
+This directory follows a feature-oriented structure aligned with the PRD user journeys.
 
 - `App/`: application lifecycle, scene setup, and configuration.
 - `Core/`: reusable foundations that do not depend on business features.
-- `Modules/`: PRD feature modules such as onboarding, pet profile setup, companion home, touch interaction, pet chat, memory timeline, profile, and shared UI.
+- `Modules/`: feature modules grouped by product flows and tabs (e.g., onboarding, pet setup, home, interaction, chat, memory, profile).
 - `Models/`: global domain models shared across modules.
 - `Database/`: persistence managers and repositories.
-- `Services/`: integrations with platform or external services, including digital avatar generation, notifications, and analytics.
+- `Services/`: integrations with external or platform services (e.g., avatar generation, notifications, analytics).
 - `Resources/`: asset catalogs, sounds, and Lottie animation files.
 - `Supporting Files/`: bridging headers and other Xcode support files.
 - `Moli.xcodeproj/`: Xcode project bundle placeholder.
